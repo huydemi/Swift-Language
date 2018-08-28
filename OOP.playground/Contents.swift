@@ -119,3 +119,37 @@ let acousticGuitar = AcousticGuitar(brand: "Roland", stringGauge: "light")
 acousticGuitar.tune()
 acousticGuitar.play(music)
 
+// 1
+class Amplifier {
+  // 2
+  private var _volume: Int
+  // 3
+  private(set) var isOn: Bool
+  
+  init() {
+    isOn = false
+    _volume = 0
+  }
+  
+  // 4
+  func plugIn() {
+    isOn = true
+  }
+  
+  func unplug() {
+    isOn = false
+  }
+  
+  // 5
+  var volume: Int {
+    // 6
+    get {
+      return isOn ? _volume : 0
+    }
+    // 7
+    set {
+      _volume = min(max(newValue, 0), 10)
+    }
+  }
+}
+
