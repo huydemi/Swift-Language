@@ -9,3 +9,4 @@ Source:
 - [Object Oriented Programming in Swift](https://www.raywenderlich.com/599-object-oriented-programming-in-swift)
 - [An Introduction to Functional Programming in Swift](https://www.raywenderlich.com/693-an-introduction-to-functional-programming-in-swift)
 - [What’s New in Swift 3.1?](https://www.raywenderlich.com/695-what-s-new-in-swift-3-1)
+- [Swift Generics Tutorial: Getting Started](https://www.raywenderlich.com/722-swift-generics-tutorial-getting-started)
