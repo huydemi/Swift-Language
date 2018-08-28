@@ -43,3 +43,31 @@ class Instrument {
 
 }
 
+// 1
+class Piano: Instrument {
+  let hasPedals: Bool
+  // 2
+  static let whiteKeys = 52
+  static let blackKeys = 36
+  
+  // 3
+  init(brand: String, hasPedals: Bool = false) {
+    self.hasPedals = hasPedals
+    // 4
+    super.init(brand: brand)
+  }
+  
+  // 5
+  override func tune() -> String {
+    return "Piano standard tuning for \(brand)."
+  }
+  
+  override func play(_ music: Music) -> String {
+    // 6
+    let preparedNotes = super.play(music)
+    return "Piano playing \(preparedNotes)"
+  }
+}
+
+
+
