@@ -101,4 +101,21 @@ class Guitar: Instrument {
   }
 }
 
+class AcousticGuitar: Guitar {
+  static let numberOfStrings = 6
+  static let fretCount = 20
+  
+  override func tune() -> String {
+    return "Tune \(brand) acoustic with E A D G B E"
+  }
+  
+  override func play(_ music: Music) -> String {
+    let preparedNotes = super.play(music)
+    return "Play folk tune on frets \(preparedNotes)."
+  }
+}
+
+let acousticGuitar = AcousticGuitar(brand: "Roland", stringGauge: "light")
+acousticGuitar.tune()
+acousticGuitar.play(music)
 
