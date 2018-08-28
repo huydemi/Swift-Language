@@ -9,6 +9,12 @@ struct Employee: Codable {
   var name: String
   var id: Int
   var favoriteToy: Toy
+  
+  enum CodingKeys: String, CodingKey {
+    case id = "employeeId"
+    case name
+    case favoriteToy
+  }
 }
 
 struct Toy: Codable {
